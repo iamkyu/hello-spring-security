@@ -24,6 +24,18 @@
 - https://docs.spring.io/spring-security/site/docs/5.4.2/reference/html5/#servlet-filterchainproxy
 
 
+## Authentication
+- 인증 요청 또는 인증된 주체에 대한 토큰을 나타내는 인터페이스
+- 실제 구현체들은 모드 접미사로 *Token 이라는 이름을 가짐
+
+`Authentication` 은 스프링 시큐리티에서 크게 2가지 역할을 함.
+1. 사용자가 제공한 인증 정보를 `AuthenticationManager` 에 전달
+2. 현재 인증 된 사용자 나타냄. `Authentication` 로 부터 principal, credentials, authorities 을 얻을 수 있음.
+
+### See Also
+- https://docs.spring.io/spring-security/site/docs/5.4.2/reference/html5/#servlet-authentication-authentication
+
+
 ## 참고
 - [스프링 시큐리티 - Spring Boot 기반으로 개발하는 Spring Security](https://www.inflearn.com/course/%EC%BD%94%EC%96%B4-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0#)
 - [Spring Security Reference 5.4.2](https://docs.spring.io/spring-security/site/docs/5.4.2/reference/html5/)
