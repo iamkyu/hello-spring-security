@@ -36,6 +36,16 @@
 - https://docs.spring.io/spring-security/site/docs/5.4.2/reference/html5/#servlet-authentication-authentication
 
 
+## SecurityContext & SecurityContextHolder
+- `SecurityContext` 는 현재 스레드에 최소한의 보안에 관한 정보를 정의하는 인터페이스. 앞서 정리한 `Authentication` 를 set, get 하는 시그니처만 가짐.
+- `SecurityContextHolder` 는 `SecurityContext` 를 담고 있고 모든 시그니처는 정적(static)으로 제공 됨.
+- `SecurityContextHolder` 가 `SecurityContext` 를 저장하는 모드는 크게 3가지. MODE_THREADLOCAL, MODE_INHERITABLETHREADLOCAL, MODE_GLOBAL
+
+### See Also
+- https://javacan.tistory.com/entry/ThreadLocalUsage
+- https://stackoverflow.com/questions/45725888/why-does-spring-security-store-securitycontext-in-thread-local-variable
+
+
 ## 참고
 - [스프링 시큐리티 - Spring Boot 기반으로 개발하는 Spring Security](https://www.inflearn.com/course/%EC%BD%94%EC%96%B4-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0#)
 - [Spring Security Reference 5.4.2](https://docs.spring.io/spring-security/site/docs/5.4.2/reference/html5/)
